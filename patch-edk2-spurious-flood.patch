@@ -1,0 +1,24 @@
+diff -Naur a/edk2/ArmPkg/Drivers/ArmGic/GicV2/ArmGicV2Dxe.c b/edk2/ArmPkg/Drivers/ArmGic/GicV2/ArmGicV2Dxe.c
+--- a/edk2/ArmPkg/Drivers/ArmGic/GicV2/ArmGicV2Dxe.c	2024-02-22 16:10:23.512046224 +0100
++++ b/edk2/ArmPkg/Drivers/ArmGic/GicV2/ArmGicV2Dxe.c	2024-02-22 19:34:38.797851790 +0100
+@@ -179,7 +179,7 @@
+     // Call the registered interrupt handler.
+     InterruptHandler (GicInterrupt, SystemContext);
+   } else {
+-    DEBUG ((DEBUG_ERROR, "Spurious GIC interrupt: 0x%x\n", (UINT32)GicInterrupt));
++//    DEBUG ((DEBUG_ERROR, "Spurious GIC interrupt: 0x%x\n", (UINT32)GicInterrupt));
+     GicV2EndOfInterrupt (&gHardwareInterruptV2Protocol, GicInterrupt);
+   }
+ }
+diff -Naur a/edk2/ArmPkg/Drivers/ArmGic/GicV3/ArmGicV3Dxe.c b/edk2/ArmPkg/Drivers/ArmGic/GicV3/ArmGicV3Dxe.c
+--- a/edk2/ArmPkg/Drivers/ArmGic/GicV3/ArmGicV3Dxe.c	2024-02-22 16:10:23.512046224 +0100
++++ b/edk2/ArmPkg/Drivers/ArmGic/GicV3/ArmGicV3Dxe.c	2024-02-22 19:34:29.757615938 +0100
+@@ -173,7 +173,7 @@
+     // Call the registered interrupt handler.
+     InterruptHandler (GicInterrupt, SystemContext);
+   } else {
+-    DEBUG ((DEBUG_ERROR, "Spurious GIC interrupt: 0x%x\n", (UINT32)GicInterrupt));
++//    DEBUG ((DEBUG_ERROR, "Spurious GIC interrupt: 0x%x\n", (UINT32)GicInterrupt));
+     GicV3EndOfInterrupt (&gHardwareInterruptV3Protocol, GicInterrupt);
+   }
+ }

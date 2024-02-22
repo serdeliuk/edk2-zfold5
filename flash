@@ -1,0 +1,3 @@
+#!/bin/bash
+
+prebuilt/heimdall flash --RECOVERY recovery.img --verbose
